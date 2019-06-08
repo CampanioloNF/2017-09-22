@@ -13,6 +13,9 @@ public class TestFormulaOneDAO {
 		List<Season> seasons = dao.getAllSeasons();
 		System.out.println(seasons);
 
+		
 	}
+
+
 
 }

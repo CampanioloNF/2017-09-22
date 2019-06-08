@@ -81,6 +81,9 @@ public class Driver {
 		this.url = url;
 	}
 	
+	public String toString() {
+		return this.forename+" "+this.surname;
+	}
 	
 	
 

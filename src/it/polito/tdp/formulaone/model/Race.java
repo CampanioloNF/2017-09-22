@@ -2,19 +2,19 @@ package it.polito.tdp.formulaone.model;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.time.Year;
 
-public class Race {
+
+public class Race implements Comparable<Race>{
 	
 	private int raceId ;
-	private Year year ;
+	private int year ;
 	private int round ;
 	private int circuitId ; // refers to {@link Circuit}
 	private String name ;
 	private LocalDate date ;
 	private LocalTime time ;
 	private String url ;
-	public Race(int raceId, Year year, int round, int circuitId, String name, LocalDate date, LocalTime time,
+	public Race(int raceId, int year, int round, int circuitId, String name, LocalDate date, LocalTime time,
 			String url) {
 		super();
 		this.raceId = raceId;
@@ -32,10 +32,10 @@ public class Race {
 	public void setRaceId(int raceId) {
 		this.raceId = raceId;
 	}
-	public Year getYear() {
+	public int getYear() {
 		return year;
 	}
-	public void setYear(Year year) {
+	public void setYear(int year) {
 		this.year = year;
 	}
 	public int getRound() {
@@ -75,6 +75,13 @@ public class Race {
 		this.url = url;
 	}
 	
-	
+	public String toString() {
+		return this.name;
+	}
+	@Override
+	public int compareTo(Race r) {
+		// TODO Auto-generated method stub
+		return this.name.compareTo(r.name);
+	}
 
 }
